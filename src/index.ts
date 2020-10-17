@@ -1,3 +1,1 @@
-export const Greeter = (name: string) => `Hello ${name}`; 
-
-export {sayHello, sayGoodbye} from './helpers/abc1';
+export { averageDiceRoll } from './helpers/dice-roll-sum/average-dice-roll.helper';
