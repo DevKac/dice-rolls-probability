@@ -1,6 +1,6 @@
 import { DiceRollSum } from '../../models/dice-roll-sum.interface';
 
-export function averageDiceRoll(sidesOnDice: number, numberOfDice: number): DiceRollSum {
+export function averageDiceRollExact(sidesOnDice: number, numberOfDice: number): DiceRollSum {
   if (!sidesOnDice || isNaN(sidesOnDice) || sidesOnDice < 1) {
     throw new Error('Parameter sidesOnDice must be a positive number!')
   }
