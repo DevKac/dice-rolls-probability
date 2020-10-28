@@ -36,7 +36,7 @@ function getNextResult(currentDiceRoll: number[], sidesOnDice: number, dieNumber
   if (currentDiceRoll[dieNumber - 1] < sidesOnDice) {
     currentDiceRoll[dieNumber - 1]++;
     return currentDiceRoll;
-  } else if (currentDiceRoll[dieNumber - 1] = sidesOnDice) {
+  } else if (currentDiceRoll[dieNumber - 1] === sidesOnDice) {
     currentDiceRoll[dieNumber - 1] = 1;
     return getNextResult(currentDiceRoll, sidesOnDice, dieNumber - 1);
   } else {

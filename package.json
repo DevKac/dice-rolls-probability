@@ -1,8 +1,9 @@
 {
-  "name": "typescript-npm-library",
+  "name": "dice-rolls-probability",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Library with helpers for calculating expected dice rolls",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
@@ -10,14 +11,19 @@
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A",
+    "postversion" : "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DevKac/dice-rolls-probability.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Die", "Statistics", "Probability"],
+  "author": "AKB",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DevKac/dice-rolls-probability/issues"
